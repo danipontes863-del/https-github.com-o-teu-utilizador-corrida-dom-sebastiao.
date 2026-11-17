@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#26170f">
+    <meta name="description" content="Corre pelo deserto com D. Sebastião e desvia-te dos perigos de Alcácer Quibir.">
+    <title>A Corrida de D. Sebastião</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <a class="brand" href="./" aria-label="A Corrida de D. Sebastião">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg class="brand-crest" viewBox="0 0 32 36" role="img">
+                        <path fill="#e7b553" d="M5 2h5v4h4V1h5v5h4V2h5v8H5z"/>
+                        <path fill="#a83c32" d="M4 10h24v12L16 34 4 22z"/>
+                        <path fill="#f2e4c5" d="M7 13h18v8l-9 9-9-9z"/>
+                        <path fill="#315a82" d="M14 14h4v5h-4zM9 18h4v5H9zM19 18h4v5h-4zM14 23h4v5h-4z"/>
+                        <path fill="#fff0bd" d="M15 15h1v1h-1zM10 19h1v1h-1zM21 19h1v1h-1zM15 24h1v1h-1z"/>
+                    </svg>
+                </span>
+                <span class="brand-label">Brasão</span>
+                <span>A Corrida <span class="brand-light">de D. Sebastião</span></span>
+            </a>
+            <div class="scoreboard" aria-label="Pontuação">
+                <div class="score-item">
+                    <span class="score-label">PONTUAÇÃO</span>
+                    <span id="score" class="score-value">00000</span>
+                </div>
+                <span class="score-divider" aria-hidden="true"></span>
+                <div class="score-item">
+                    <span class="score-label">RECORDE</span>
+                    <span id="best-score" class="score-value best-value">00000</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="game-section" aria-label="Jogo">
+            <aside class="history-panel" aria-label="Factos sobre D. Sebastião">
+                <div class="history-copy">
+                    <div class="history-meta">
+                        <span class="history-heading">A HISTÓRIA POR TRÁS DA CORRIDA</span>
+                        <span id="history-count" class="history-count">01 / 12</span>
+                    </div>
+                    <p id="history-fact" aria-live="polite" aria-atomic="true"></p>
+                </div>
+                <div class="history-controls" aria-label="Navegar pelos factos">
+                    <button id="previous-fact" type="button" aria-label="Facto anterior">←</button>
+                    <button id="next-fact" type="button" aria-label="Próximo facto">→</button>
+                </div>
+            </aside>
+            <div class="canvas-wrap">
+                <canvas id="game-canvas" width="960" height="360" aria-label="D. Sebastião a correr num deserto. Salta para evitar obstáculos." role="img"></canvas>
+                <div id="start-screen" class="overlay">
+                    <div class="overlay-card">
+                        <span class="eyebrow">PORTUGAL · 1578</span>
+                        <h1>A Corrida<br><span>de D. Sebastião</span></h1>
+                        <p>O deserto está cheio de perigos.<br>Conduz o rei em segurança!</p>
+                        <button id="start-button" class="primary-button" type="button">
+                            Começar <span aria-hidden="true">→</span>
+                        </button>
+                        <span class="overlay-hint">W / ESPAÇO / ↑ SALTAR · A / D MOVER · S BAIXAR</span>
+                    </div>
+                </div>
+                <div id="game-over-screen" class="overlay" hidden>
+                    <div class="overlay-card game-over-card">
+                        <span class="eyebrow">O DESTINO FOI SELADO</span>
+                        <h2>D. Sebastião<br><span>desapareceu!</span></h2>
+                        <p>O deserto guardará o seu mistério.</p>
+                        <div class="final-score">PONTUAÇÃO <strong id="final-score">00000</strong></div>
+                        <button id="restart-button" class="primary-button" type="button">
+                            Jogar novamente <span aria-hidden="true">↻</span>
+                        </button>
+                        <span class="overlay-hint">W / ESPAÇO / ↑ para tentar outra vez</span>
+                    </div>
+                </div>
+            </div>
+            <div class="game-footer">
+                <span class="game-caption"><span class="status-dot"></span> A aventura de Alcácer Quibir</span>
+                <span class="control-caption"><kbd>W</kbd> / <kbd>↑</kbd> SALTAR <span class="control-or">·</span> <kbd>A</kbd> <kbd>D</kbd> MOVER <span class="control-or">·</span> <kbd>S</kbd> BAIXAR <span class="control-or">·</span> TOCA PARA SALTAR</span>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>Uma lenda portuguesa em pixel art</span>
+            <span class="footer-cross" aria-hidden="true">✦</span>
+            <span>Corre. Salta. Sobrevive.</span>
+            <span class="credit-line">Trabalho realizado por: <span class="credit-names">Danielson e Henrique</span> 12º11</span>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
